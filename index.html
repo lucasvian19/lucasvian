@@ -4,39 +4,172 @@
     <title>Lucas Viana - Video Editor</title>
 
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-            background: #111;
-            color: white;
+            margin: 0;
+            background: white;
+            color: black;
             font-family: Arial, sans-serif;
-            padding: 60px;
         }
 
-        h1 {
-            font-size: 60px;
-            margin-bottom: 10px;
+        /* HEADER */
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 50px;
         }
 
-        p {
-            color: #aaa;
+        .name {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .contact {
+            background: black;
+            color: white;
+            padding: 14px 24px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 14px;
+        }
+
+        /* HERO */
+
+        .hero {
+            padding: 120px 50px 80px;
+        }
+
+        .hero h1 {
+            font-size: 80px;
+            line-height: 0.95;
+            margin: 0;
+        }
+
+        .hero p {
             font-size: 20px;
+            margin-top: 25px;
+        }
+
+        /* PROJECTS */
+
+        .projects {
+            padding: 50px;
+        }
+
+        .projects h2 {
+            font-size: 40px;
+            margin-bottom: 40px;
+        }
+
+        .carousel {
+            display: flex;
+            gap: 30px;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            padding-bottom: 20px;
         }
 
         .project {
-            margin-top: 80px;
+            flex: 0 0 70vw;
+            aspect-ratio: 16 / 9;
+            background: #eeeeee;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            flex-direction: column;
         }
+
+        .project span {
+            font-size: 14px;
+            margin-top: 10px;
+            color: #666;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 700px) {
+
+            header {
+                padding: 25px;
+            }
+
+            .hero {
+                padding: 80px 25px;
+            }
+
+            .hero h1 {
+                font-size: 55px;
+            }
+
+            .projects {
+                padding: 25px;
+            }
+
+            .project {
+                flex: 0 0 90vw;
+            }
+        }
+
     </style>
 </head>
 
 <body>
 
-    <h1>Lucas Viana</h1>
+    <header>
+        <div class="name">Lucas Viana</div>
 
-    <p>Video Editor / Motion Designer</p>
+        <a class="contact" href="mailto:your@email.com">
+            Contact Me
+        </a>
+    </header>
 
-    <div class="project">
+
+    <section class="hero">
+
+        <h1>Video Editor<br>& Motion Designer</h1>
+
+        <p>
+            I create videos, motion graphics and visual experiences.
+        </p>
+
+    </section>
+
+
+    <section class="projects">
+
         <h2>Selected Work</h2>
-        <p>My video editing and motion design portfolio.</p>
-    </div>
+
+        <div class="carousel">
+
+            <div class="project">
+                PROJECT 01
+                <span>1920 × 1080</span>
+            </div>
+
+            <div class="project">
+                PROJECT 02
+                <span>1920 × 1080</span>
+            </div>
+
+            <div class="project">
+                PROJECT 03
+                <span>1920 × 1080</span>
+            </div>
+
+            <div class="project">
+                PROJECT 04
+                <span>1920 × 1080</span>
+            </div>
+
+        </div>
+
+    </section>
 
 </body>
 </html>
